@@ -34,4 +34,23 @@ router.delete("/:id", (req, res) => {
   res.send(`User with the id ${id} deleted from the database`);
 });
 
+// PUT is used to completely overwrite the data
+// PATCH is used to update some part of the data
+router.patch("/:id", (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, age } = req.body;
+
+  const user = users.find((user) => user.id === id);
+  if (firstName) {
+    user.firstName = firstName;
+  }
+  if (lastName) {
+    user.lastName = lastName;
+  }
+  if (age) {
+    user.age = age;
+  }
+  res.send(`User with the id ${id} has been updated`);
+});
+
 module.exports = router;
