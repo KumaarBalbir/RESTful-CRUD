@@ -4,7 +4,7 @@ const router = express.Router();
 const uuidv4 = require("uuid").v4;
 
 // In real world, this data would be coming from database
-const users = [];
+let users = [];
 
 // all routes here will start with /users
 router.get("/", (req, res) => {
