@@ -1,25 +1,10 @@
 const express = require("express");
 
 const router = express.Router();
+const uuidv4 = require("uuid").v4;
 
 // In real world, this data would be coming from database
-const users = [
-  {
-    firstName: "Balbir",
-    lastName: "Singh",
-    age: 23,
-  },
-  {
-    firstName: "Pranav",
-    lastName: "Sha",
-    age: 21,
-  },
-  {
-    firstName: "Rohit",
-    lastName: "Prasad",
-    age: 25,
-  },
-];
+const users = [];
 
 // all routes here will start with /users
 router.get("/", (req, res) => {
@@ -29,7 +14,10 @@ router.get("/", (req, res) => {
 //browser only can do get request, so to test it, use postman
 router.post("/", (req, res) => {
   const user = req.body;
-  users.push(user);
+  const userId = uuidv4();
+  const userWithId = { ...user, id: userId };
+  users.push(userWithId);
   res.send(`User with the name ${user.firstName} added to the database`);
 });
+
 module.exports = router;
