@@ -3,7 +3,8 @@
 RESTful API with CRUD Operations using Node.js and Express
 
 ## Features
-
+Operations implemented:
+![task](assets/task.png)
 - Create new resource
 - Read existing resource(s)
 - Update existing resource
@@ -15,7 +16,7 @@ RESTful API with CRUD Operations using Node.js and Express
 - npm (Node Package Manager) or yarn
 
 ## Installation
-1. Clone the repository: `git cloen https://github.com/KumaarBalbir/RESTful-CRUD.git`
+1. Clone the repository: `git clone https://github.com/KumaarBalbir/RESTful-CRUD.git`
 2. Navigate to the project directory: `cd RESTful-CRUD`
 3. Install dependencies: `npm install`
 
