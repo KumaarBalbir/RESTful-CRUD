@@ -1,11 +1,17 @@
 ## Overview
 
-This is overview.
+RESTful API with CRUD Operations using Node.js and Express
 
-## Task
+## Features
 
-- `GET /users` : finds all users
-- `POST /users` : creates a user
-- `GET /users/:id` : finds user details
-- `DELETE /users/:id` : deletes a user
-- `PATCH /users/:id` : updates a user
+- Create new resource
+- Read existing resource(s)
+- Update existing resource
+- Delete existing resource
+
+## Requirements
+
+- Node.js (version >= 10)
+- npm (Node Package Manager) or yarn
+
+## Installation
