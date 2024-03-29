@@ -20,4 +20,11 @@ router.post("/", (req, res) => {
   res.send(`User with the name ${user.firstName} added to the database`);
 });
 
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+  const foundUser = users.find((user) => user.id === id);
+  if (!foundUser) return res.status(404).send("User not found");
+  res.send(foundUser);
+});
+
 module.exports = router;
