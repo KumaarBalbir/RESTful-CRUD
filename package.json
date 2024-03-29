@@ -1,0 +1,25 @@
+{
+  "name": "restful_api",
+  "version": "1.0.0",
+  "description": "This is generic restful api with CRUD operation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "CRUD",
+    "Nodejs",
+    "Expressjs"
+  ],
+  "author": "Balbir",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
